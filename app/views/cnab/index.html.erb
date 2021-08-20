@@ -1,0 +1,69 @@
+
+
+<a href="https://www.blu.com.br/">
+		<img id="logo" src="https://www.moveisdevalor.com.br/portal/cache/image/14119-Sem-Titulo-1-400x300.png" width=200>
+		</a>
+
+		<h1 id="titulo">Desafio back-end</h1>
+		<p id="descri">Esse desafio consiste em construir uma <strong>aplicação web </strong>que receba <br>
+		via upload um <strong>arquivo CNAB</strong>, salve esse arquivo em um banco de <br>
+		dados e imprima as informações desse arquivo na tela para o usuário. </p>
+		<br>
+
+<form action="/cnabs/importar" enctype="multipart/form-data" method="post">
+<fieldset>
+<legend>Envie o arquivo CNAB</legend>
+<input type ="file" name="CNAB_txt"> 
+<input type ="submit" class="btn" name="Enviar"> 
+</fieldset>
+</form>
+
+
+<br>
+<h1>Saldo</h1>
+<html>
+<body>
+<h3><b><% @saldo %></b></h3>
+</body>
+</html>
+
+
+<br>
+<table class="table table-striped table-bordered table-hover">
+<thead>
+<tr>
+<th>tipo</th>
+<th>data</th>
+<th>valor</th>
+<th>cpf</th>
+<th>cartão</th>
+<th>hora</th>
+<th>dono_da_loja</th>
+
+
+
+
+</tr>
+</thead>
+
+
+
+<tbody>
+<% @cnabs.each do |cnab| %>
+	<tr class="">
+	  <td><%= cnab.tipo %></td>
+	  <td><%= cnab.data %></td>
+	  <td><%= cnab.valor %></td>
+	  <td><%= cnab.cpf %></td>
+	  <td><%= cnab.cartao %></td>
+	  <td><%= cnab.hora %></td>
+	  <td><%= cnab.dono_da_loja %></td>
+	  <td><%= cnab.nome_da_loja %></td>
+	  
+	</tr>
+  <% end %>
+</tbody>
+</table>
+
+<br>
+

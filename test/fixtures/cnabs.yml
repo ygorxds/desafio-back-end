@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  data: MyString
+  valor: 9.99
+  cpf: MyString
+  cartao: MyString
+  hora: MyString
+  dono_da_loja: MyString
+  nome_da_loja: MyString
+
+two:
+  tipo: MyString
+  data: MyString
+  valor: 9.99
+  cpf: MyString
+  cartao: MyString
+  hora: MyString
+  dono_da_loja: MyString
+  nome_da_loja: MyString
